@@ -1,0 +1,153 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+nav h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 5px 0;
+}
+
+.simulator h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.simulator input, 
+.simulator select, 
+.simulator button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.simulator button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+.simulator button:hover {
+    background-color: #218838;
+}
+
+.result h2, .result h3 {
+    font-size: 24px;
+}
+
+.result ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.result ul li {
+    margin: 5px 0;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+footer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer .community, 
+footer .donations {
+    margin-bottom: 20px;
+}
+
+/* Apply styles to all links */
+a {
+    color: #4CAF50; /* Set the text color to white */
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block;
+}
+
+/* Optional: Add a hover effect for all links */
+a:hover {
+    color: #45a049; /* Slightly darker green on hover */
+}
+
+/* General styles for input, select, and button to ensure consistent height */
+input[type="text"],
+input[type="number"],
+select,
+button {
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.2;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Ensure padding doesn't affect width/height */
+    height: 42px; /* Ensures consistent height */
+}
+
+/* Specific styles for the button */
+button {
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    cursor: pointer;
+}
+
+/* Optional: Add a hover effect for the button */
+button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Optional: Add a hover effect for the select */
+select:hover {
+    background-color: #f5f5f5; /* Slightly lighter background on hover */
+}
+
+/* Optional: Add focus styles for better accessibility */
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+button:focus {
+    outline: none;
+    border-color: #4CAF50; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Add shadow on focus */
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeFi Tools - Essential Tools for Liquidity Providers and Yield Farmers</title>
+    <meta name="description" content="DeFi Tools offers essential tools for liquidity providers and yield farmers, helping you calculate token requirements, simulate positions, and manage your DeFi investments.">
+    <meta name="keywords" content="DeFi tools, liquidity provider, yield farming, crypto tools, decentralized finance, Uniswap, token calculation, DeFi investment">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/9.0.1/bignumber.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DeFi Tools</h1>
+            <p>Essential Tools for Liquidity Providers and Yield Farmers</p>
+        </header>
+
+        <section id="simulator" class="simulator">
+            <h2>Simulator</h2>
+            <input type="text" id="tokenA" placeholder="Enter Token A Symbol (e.g., ETH)">
+            <input type="text" id="tokenB" placeholder="Enter Token B Symbol (e.g., USDC)">
+            
+            <!-- Hide these fields initially -->
+            <div id="formFields" style="display: none;">
+                <select id="baseToken" style="display: none;">
+                    <!-- Options will be populated dynamically -->
+                    <option value="" disabled selected>Select base token</option>
+                </select>
+                
+                <div id="investmentField" style="display: none;">
+                    <input type="number" id="investment" placeholder="Enter Total Investment">
+                </div>
+                
+                <div id="priceFields" style="display: none;">
+                    <input type="number" id="currentPrice" placeholder="Enter Current Price">
+                    <input type="number" id="minPrice" placeholder="Enter Min Price">
+                    <input type="number" id="maxPrice" placeholder="Enter Max Price">
+                </div>
+
+                <button onclick="simulatePosition()">Simulate Position</button>
+            </div>
+        </section>
+
+        <section id="resultSection" class="result" style="display: none;">
+            <h2>Result</h2>
+            <div id="positionResult">
+                <h3>1. Create Position</h3>
+                <p>The amount of <span class="tokenASymbol">TokenA</span> and <span class="tokenBSymbol">TokenB</span> you will need to create your position.</p>
+                <ul>
+                    <li><span class="tokenASymbol">TokenA</span>: <span id="ethAmount">0.312442</span> (<span id="ethPercentage">83.95%</span>)</li>
+                    <li><span class="tokenBSymbol">TokenB</span>: <span id="usdcAmount">160.467609</span> (<span id="usdcPercentage">16.05%</span>)</li>
+                </ul>
+            </div>
+            <div id="rangeResult">
+                <h3>2. Price Range Analysis</h3>
+                <p>Impact of your liquidity when market price moves outside the chosen range.</p>
+                <ul>
+                    <li>Price &lt;= <span id="minPriceDisplay">2500</span>: <span id="belowMinPrice">0.374294 <span class="tokenASymbol">TokenA</span></span></li>
+                    <li>Price &gt;= <span id="maxPriceDisplay">3500</span>: <span id="aboveMaxPrice">1184.765434 <span class="tokenBSymbol">TokenB</span></span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!--<section id="community" class="community">
+            <h2>Community</h2>
+            <p>Join the DeFi Tools Community in Telegram.</p>
+        </section>-->
+
+        <section id="donations" class="donations">
+            <h2>Donations</h2>
+            <p>Do you like DeFi Tools? Support me by sending ETH on any blockchain to:</p>
+            <p>0x2170bc5E5eeb2bbF3172AbF2716D8BBB729D2ab6</p>
+        </section>
+
+        <footer>
+            <p>Built with ♥ by <a href="https://x.com/camilosaka" target="_blank">@camilosaka</a></p>
+        </footer>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
